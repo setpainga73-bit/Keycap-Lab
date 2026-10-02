@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keycap Lab - Register</title>
+    <link rel="stylesheet" href="../CSS/Style.css" />
+  </head>
+  <body class="register-page">
+    <nav class="navbar">
+      <!-- Logo & Navigation Links -->
+      <div class="nav-left">
+        <a href="#" class="logo">
+          <span class="logo-icon"></span>
+          Keycap Lab
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <button
+        class="drawer-backdrop"
+        type="button"
+        aria-label="Close navigation menu"
+        tabindex="-1"
+      ></button>
+      <aside
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Main navigation"
+        aria-hidden="true"
+        inert
+      >
+        <div class="drawer-header">
+          <span class="drawer-title">Menu</span>
+          <button
+            class="drawer-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Bundles</a></li>
+          <li><a href="#">Builder</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a class="nav-auth-button nav-auth-login" href="./Login.html">Login</a></li>
+          <li>
+            <a class="nav-auth-button nav-auth-logout" href="./Register.html">Register</a>
+          </li>
+        </ul>
+      </aside>
+    </nav>
+
+    <div class="search-bar">
+      <div class="search-bar-inner">
+        <div class="search-box">
+          <input
+            type="search"
+            placeholder="Search parts"
+            aria-label="Search parts"
+          />
+        </div>
+      </div>
+    </div>
+
+    <main class="register-layout">
+      <section class="register-form-panel" aria-labelledby="register-title">
+        <div class="register-form-wrap">
+          <p class="register-eyebrow">KEYCAP LAB ACCOUNT</p>
+          <h1 id="register-title">Create your account</h1>
+          <p class="register-intro">
+            Save builds, track orders and keep a wishlist.
+          </p>
+
+          <form class="register-form" action="#" method="post">
+            <label class="register-field">
+              <span>Full name</span>
+              <input
+                type="text"
+                name="name"
+                autocomplete="name"
+                placeholder="Your name"
+                required
+              />
+            </label>
+            <label class="register-field">
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+            </label>
+            <label class="register-field">
+              <span>Password</span>
+              <input
+                type="password"
+                name="password"
+                autocomplete="new-password"
+                placeholder="At least 8 characters with a number"
+                minlength="8"
+                pattern="(?=.*[0-9]).{8,}"
+                title="Use at least 8 characters and include a number."
+                required
+              />
+            </label>
+            <label class="register-field">
+              <span>Confirm password</span>
+              <input
+                type="password"
+                name="confirm-password"
+                autocomplete="new-password"
+                placeholder="Repeat your password"
+                minlength="8"
+                required
+              />
+            </label>
+
+            <div
+              class="register-password-meter"
+              aria-label="Password requirements: 8 characters and one number"
+            >
+              <span></span><span></span><span></span><span></span>
+              <small>Use 8+ characters and at least one number</small>
+            </div>
+
+            <label class="register-consent">
+              <input type="checkbox" name="terms" required />
+              <span
+                >I agree to the <a href="#terms">terms</a> and
+                <a href="#privacy">privacy policy</a>.</span
+              >
+            </label>
+
+            <button class="register-submit" type="submit">
+              Create account
+            </button>
+          </form>
+
+          <div class="register-divider"><span>or continue with</span></div>
+          <div class="register-socials">
+            <button type="button" class="register-social-button">
+              <span aria-hidden="true">G</span> Sign up with Google
+            </button>
+            <button type="button" class="register-social-button">
+              <span aria-hidden="true">◈</span> Sign up with GitHub
+            </button>
+          </div>
+          <p class="register-login">
+            Already have an account? <a href="./Login.html">Log in</a>
+          </p>
+        </div>
+      </section>
+
+      <aside
+        class="register-story-panel"
+        aria-labelledby="register-story-title"
+      >
+        <img
+          src="../IMG/top-view-white-keyboard-desk.jpg"
+          alt="Custom white mechanical keyboard lit in blue and pink"
+        />
+        <div class="register-story-content">
+          <span class="register-story-mark" aria-hidden="true">KL</span>
+          <p class="register-story-kicker">BUILT AROUND YOU</p>
+          <h2 id="register-story-title">Your builds, saved.</h2>
+          <p>
+            Create an account to save custom builds, reorder parts and follow
+            every order from pack to delivery.
+          </p>
+        </div>
+        <span class="register-story-index">01 / 03 &nbsp; YOUR WORKSHOP</span>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon"></span>
+            Keycap Lab
+          </a>
+          <p>
+            Premium keyboard parts, curated kits, and tools for builders who
+            care about the details.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="#">Bundles</a></li>
+              <li><a href="#">Cases</a></li>
+              <li><a href="#">PCBs</a></li>
+              <li><a href="#">Keycaps</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Journal</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Keycap Lab</span>
+        <div class="footer-meta">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keycap Lab Navbar</title>
+    <title>Keycap Lab - Home</title>
     <link rel="stylesheet" href="./CSS/Style.css" />
+    <script src="./JS/nav-bar.js" defer></script>
   </head>
   <body>
     <nav class="navbar">
@@ -32,10 +33,20 @@
         aria-label="Close navigation menu"
         tabindex="-1"
       ></button>
-      <aside class="mobile-menu" id="mobile-menu" aria-label="Main navigation" aria-hidden="true" inert>
+      <aside
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Main navigation"
+        aria-hidden="true"
+        inert
+      >
         <div class="drawer-header">
           <span class="drawer-title">Menu</span>
-          <button class="drawer-close" type="button" aria-label="Close navigation menu">
+          <button
+            class="drawer-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -45,8 +56,10 @@
           <li><a href="#">Builder</a></li>
           <li><a href="#">Wishlist</a></li>
           <li><a href="#">Cart</a></li>
-          <li><a class="nav-auth-button nav-auth-login" href="#">Login</a></li>
-          <li><a class="nav-auth-button nav-auth-logout" href="#">Logout</a></li>
+          <li><a class="nav-auth-button nav-auth-login" href="./HTML/Login.html">Login</a></li>
+          <li>
+            <a class="nav-auth-button nav-auth-logout" href="./HTML/Register.html">Register</a>
+          </li>
         </ul>
       </aside>
     </nav>
@@ -54,205 +67,213 @@
     <div class="search-bar">
       <div class="search-bar-inner">
         <div class="search-box">
-          <input type="search" placeholder="Search parts" aria-label="Search parts" />
+          <input
+            type="search"
+            placeholder="Search parts"
+            aria-label="Search parts"
+          />
         </div>
       </div>
     </div>
 
     <main>
-        <section class="hero-section">
-      <!-- Left Content Column -->
-      <div class="hero-left">
-        <p class="hero-tagline">PC KEYBOARD PARTS & BUNDLES</p>
-        <h1 class="hero-title">Build the board you actually want</h1>
-        <p class="hero-description">
-          Cases, PCBs, switches and keycaps that fit together, or a ready-made
-          kit that ships in one box.
-        </p>
-        <div class="hero-buttons">
-          <a href="#" class="btn-primary">Shop bundles</a>
-          <a href="#" class="btn-secondary">Build your own</a>
+      <section class="hero-section">
+        <!-- Left Content Column -->
+        <div class="hero-left">
+          <p class="hero-tagline">PC KEYBOARD PARTS & BUNDLES</p>
+          <h1 class="hero-title">Build the board you actually want</h1>
+          <p class="hero-description">
+            Cases, PCBs, switches and keycaps that fit together, or a ready-made
+            kit that ships in one box.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn-primary">Shop bundles</a>
+            <a href="#" class="btn-secondary">Build your own</a>
+          </div>
         </div>
-      </div>
 
-      <!-- Right Image Container Column -->
-      <div class="hero-right">
-        <div
-          class="hero-swiper"
-          role="region"
-          aria-label="Featured keyboard and computer setups"
-        >
-          <img
-            class="hero-photo"
-            src="./IMG/top-view-white-keyboard-desk.jpg"
-            alt="Top view of a white keyboard on a desk"
-          />
-          <img
-            class="hero-photo"
-            src="./IMG/daniel-korpai-8GDCzWrcE3M-unsplash.jpg"
-            alt="White keyboard and computer setup"
-          />
-          <img
-            class="hero-photo"
-            src="./IMG/Lenovo Thinkpad X1 Carbon Gen 6, core i7, 8th generation, 512ssd, 16gb ram, 2K screen display, backlit keyboard KSH_63,0000 CONTACT US_ 0714215210.jpg"
-            alt="Lenovo ThinkPad laptop with backlit keyboard"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Preset Kits Section -->
-    <section class="preset-kits">
-      <h2 class="section-title">Preset kits</h2>
-      <div class="product-grid">
-        <!-- Card 1 -->
-        <article class="product-card">
-          <div class="card-image-placeholder">
+        <!-- Right Image Container Column -->
+        <div class="hero-right">
+          <div
+            class="hero-swiper"
+            role="region"
+            aria-label="Featured keyboard and computer setups"
+          >
             <img
-              src="https://images.openai.com/static-rsc-4/nXGAKD7glfhU9qW_Xac98Q3j9HsL2oGFqhZPg9mUzZDjKJ5-by4B6zlyydvpbBIPVZWoZcvu5ALrFaiocOk9zfkdbaDCFpLfhLRDHQcFTshHp7-Ul474NuEt4pODpxQiKLe0FCj9MblGv9C8eSn8PKRNEU1KH37_GP0z7UzrUwJa-xX3HZ9lygdJpuPpNTKs?purpose=fullsize"
-              alt=""
+              class="hero-photo"
+              src="./IMG/top-view-white-keyboard-desk.jpg"
+              alt="Top view of a white keyboard on a desk"
+            />
+            <img
+              class="hero-photo"
+              src="./IMG/daniel-korpai-8GDCzWrcE3M-unsplash.jpg"
+              alt="White keyboard and computer setup"
+            />
+            <img
+              class="hero-photo"
+              src="./IMG/Lenovo Thinkpad X1 Carbon Gen 6, core i7, 8th generation, 512ssd, 16gb ram, 2K screen display, backlit keyboard KSH_63,0000 CONTACT US_ 0714215210.jpg"
+              alt="Lenovo ThinkPad laptop with backlit keyboard"
             />
           </div>
-          <div class="card-info">
-            <h3 class="card-title">Starter 65% Kit</h3>
-            <p class="card-meta">65% / hotswap / linear</p>
-            <div class="card-footer">
-              <span class="card-price">$129</span>
-              <button class="wishlist-icon" aria-label="Wishlist">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                  ></path>
-                </svg>
-              </button>
+        </div>
+      </section>
+
+      <!-- Preset Kits Section -->
+      <section class="preset-kits">
+        <h2 class="section-title">Preset kits</h2>
+        <div class="product-grid">
+          <!-- Card 1 -->
+          <article class="product-card">
+            <div class="card-image-placeholder">
+              <img
+                src="https://images.openai.com/static-rsc-4/nXGAKD7glfhU9qW_Xac98Q3j9HsL2oGFqhZPg9mUzZDjKJ5-by4B6zlyydvpbBIPVZWoZcvu5ALrFaiocOk9zfkdbaDCFpLfhLRDHQcFTshHp7-Ul474NuEt4pODpxQiKLe0FCj9MblGv9C8eSn8PKRNEU1KH37_GP0z7UzrUwJa-xX3HZ9lygdJpuPpNTKs?purpose=fullsize"
+                alt=""
+              />
             </div>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="product-card">
-          <div class="card-image-placeholder">
-            <img
-              src="https://images.openai.com/static-rsc-4/dz7qurrsv-jrBS0fjnstItbpXlwxBg2KEtuwx5bk4mM5QGiCicn_rTXjzAQF3wtq-SW2kxgeNpTVPf-cHdGCvSQJxvGqvcWXDU7XmmxKOvQP_HMvVWL-ylimCogk3SbTYQaaV2Orlsvxa9C1CZjEyjsZLpfj9k1N5Z4BCGQvd89OW88K6jOPW-nkIzZp4Wqc?purpose=fullsize"
-              alt=""
-            />
-          </div>
-          <div class="card-info">
-            <h3 class="card-title">Quiet Office Kit</h3>
-            <p class="card-meta">75% / tactile / foam</p>
-            <div class="card-footer">
-              <span class="card-price">$189</span>
-              <button class="wishlist-icon" aria-label="Wishlist">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                  ></path>
-                </svg>
-              </button>
+            <div class="card-info">
+              <h3 class="card-title">Starter 65% Kit</h3>
+              <p class="card-meta">65% / hotswap / linear</p>
+              <div class="card-footer">
+                <span class="card-price">$129</span>
+                <button class="wishlist-icon" aria-label="Wishlist">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Card 3 -->
-        <article class="product-card">
-          <div class="card-image-placeholder">
-            <img
-              src="https://images.openai.com/static-rsc-4/-OYSY2dZkRDdLxquMNw9rUvrMLjCbp6p3Z7yieqWLM3EhKWcSh0_WQugTYVJara42GM3rg2Ta-5tv8ZzSHJYvsZy2AZwunNoQ_kZfDw9fw7MOWB8lSEEOIMRNbfBUDlOvFiBbhdCUqirpcUv4TIgAzaauYT5kc5DZFo1dbwhctJ_QoFaH6khdRxgVyYMRuLK?purpose=fullsize"
-              alt=""
-            />
-          </div>
-          <div class="card-info">
-            <h3 class="card-title">Compact 60% Kit</h3>
-            <p class="card-meta">60% / hotswap / clicky</p>
-            <div class="card-footer">
-              <span class="card-price">$149</span>
-              <button class="wishlist-icon" aria-label="Wishlist">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                  ></path>
-                </svg>
-              </button>
+          <!-- Card 2 -->
+          <article class="product-card">
+            <div class="card-image-placeholder">
+              <img
+                src="https://images.openai.com/static-rsc-4/dz7qurrsv-jrBS0fjnstItbpXlwxBg2KEtuwx5bk4mM5QGiCicn_rTXjzAQF3wtq-SW2kxgeNpTVPf-cHdGCvSQJxvGqvcWXDU7XmmxKOvQP_HMvVWL-ylimCogk3SbTYQaaV2Orlsvxa9C1CZjEyjsZLpfj9k1N5Z4BCGQvd89OW88K6jOPW-nkIzZp4Wqc?purpose=fullsize"
+                alt=""
+              />
             </div>
+            <div class="card-info">
+              <h3 class="card-title">Quiet Office Kit</h3>
+              <p class="card-meta">75% / tactile / foam</p>
+              <div class="card-footer">
+                <span class="card-price">$189</span>
+                <button class="wishlist-icon" aria-label="Wishlist">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="product-card">
+            <div class="card-image-placeholder">
+              <img
+                src="https://images.openai.com/static-rsc-4/-OYSY2dZkRDdLxquMNw9rUvrMLjCbp6p3Z7yieqWLM3EhKWcSh0_WQugTYVJara42GM3rg2Ta-5tv8ZzSHJYvsZy2AZwunNoQ_kZfDw9fw7MOWB8lSEEOIMRNbfBUDlOvFiBbhdCUqirpcUv4TIgAzaauYT5kc5DZFo1dbwhctJ_QoFaH6khdRxgVyYMRuLK?purpose=fullsize"
+                alt=""
+              />
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Compact 60% Kit</h3>
+              <p class="card-meta">60% / hotswap / clicky</p>
+              <div class="card-footer">
+                <span class="card-price">$149</span>
+                <button class="wishlist-icon" aria-label="Wishlist">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Shop by Layout Section -->
+      <section class="shop-layout">
+        <h2 class="shop-title">Shop by layout</h2>
+        <div class="shop-grid">
+          <div class="shop-card">
+            <span class="layout-name">60%</span>
+            <span class="layout-sub">Browse parts</span>
           </div>
-        </article>
-      </div>
-    </section>
+          <div class="shop-card">
+            <span class="layout-name">65%</span>
+            <span class="layout-sub">Browse parts</span>
+          </div>
+          <div class="shop-card">
+            <span class="layout-name">75%</span>
+            <span class="layout-sub">Browse parts</span>
+          </div>
+          <div class="shop-card">
+            <span class="layout-name">TKL</span>
+            <span class="layout-sub">Browse parts</span>
+          </div>
+        </div>
+      </section>
 
-    <!-- Shop by Layout Section -->
-    <section class="shop-layout">
-      <h2 class="shop-title">Shop by layout</h2>
-      <div class="shop-grid">
-        <div class="shop-card">
-          <span class="layout-name">60%</span>
-          <span class="layout-sub">Browse parts</span>
-        </div>
-        <div class="shop-card">
-          <span class="layout-name">65%</span>
-          <span class="layout-sub">Browse parts</span>
-        </div>
-        <div class="shop-card">
-          <span class="layout-name">75%</span>
-          <span class="layout-sub">Browse parts</span>
-        </div>
-        <div class="shop-card">
-          <span class="layout-name">TKL</span>
-          <span class="layout-sub">Browse parts</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Builder Section -->
-    <section class="builder-layout">
+      <!-- Builder Section -->
+      <section class="builder-layout">
         <h2 class="builder-title">How the builder works</h2>
         <div class="builder-grid">
-            <div class="builder-card">
-                <span class="builder-num">1</span>
-                <span class="builder-head">Pick a layout</span>
-                <span class="builder-sub">Start with 60%,65%,75% or TKL.</span>
-            </div>
+          <div class="builder-card">
+            <span class="builder-num">1</span>
+            <span class="builder-head">Pick a layout</span>
+            <span class="builder-sub">Start with 60%,65%,75% or TKL.</span>
+          </div>
 
-            <div class="builder-card">
-                <span class="builder-num">2</span>
-                <span class="builder-head">Case and PCB</span>
-                <span class="builder-sub">Only parts that fit your layout stay selectale.</span>
-            </div>
+          <div class="builder-card">
+            <span class="builder-num">2</span>
+            <span class="builder-head">Case and PCB</span>
+            <span class="builder-sub"
+              >Only parts that fit your layout stay selectale.</span
+            >
+          </div>
 
-            <div class="builder-card">
-                <span class="builder-num">3</span>
-                <span class="builder-head">Switch and keycaps</span>
-                <span class="builder-sub">Choose and feel and the look.</span>
-            </div>
+          <div class="builder-card">
+            <span class="builder-num">3</span>
+            <span class="builder-head">Switch and keycaps</span>
+            <span class="builder-sub">Choose and feel and the look.</span>
+          </div>
 
-            <div class="builder-card">
-                <span class="builder-num">4</span>
-                <span class="builder-head">Review and order</span>
-                <span class="builder-sub">See every part the total before you pay</span>
-            </div>
+          <div class="builder-card">
+            <span class="builder-num">4</span>
+            <span class="builder-head">Review and order</span>
+            <span class="builder-sub"
+              >See every part the total before you pay</span
+            >
+          </div>
         </div>
-    </section>
-
+      </section>
+    </main>
     <footer class="site-footer">
       <div class="footer-top">
         <div class="footer-brand">
@@ -260,7 +281,10 @@
             <span class="logo-icon"></span>
             Keycap Lab
           </a>
-          <p>Premium keyboard parts, curated kits, and tools for builders who care about the details.</p>
+          <p>
+            Premium keyboard parts, curated kits, and tools for builders who
+            care about the details.
+          </p>
         </div>
 
         <div class="footer-links">
@@ -305,53 +329,5 @@
         </div>
       </div>
     </footer>
-    </main>
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const drawer = document.querySelector(".mobile-menu");
-      const drawerBackdrop = document.querySelector(".drawer-backdrop");
-      const drawerClose = document.querySelector(".drawer-close");
-      const mobileViewport = window.matchMedia("(max-width: 768px)");
-
-      function setMenuOpen(isOpen, restoreFocus = true) {
-        const drawerIsOpen = mobileViewport.matches && isOpen;
-        const drawerIsHidden = mobileViewport.matches && !isOpen;
-
-        document.body.classList.toggle("drawer-open", drawerIsOpen);
-        menuToggle.setAttribute("aria-expanded", String(drawerIsOpen));
-        menuToggle.setAttribute(
-          "aria-label",
-          drawerIsOpen ? "Close navigation menu" : "Open navigation menu",
-        );
-        drawer.setAttribute("aria-hidden", String(drawerIsHidden));
-        drawer.inert = drawerIsHidden;
-
-        if (drawerIsOpen) {
-          drawerClose.focus();
-        } else if (mobileViewport.matches && restoreFocus) {
-          menuToggle.focus();
-        }
-      }
-
-      setMenuOpen(false, false);
-      mobileViewport.addEventListener("change", () => setMenuOpen(false, false));
-
-      menuToggle.addEventListener("click", () => {
-        setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
-      });
-
-      drawerClose.addEventListener("click", () => setMenuOpen(false));
-      drawerBackdrop.addEventListener("click", () => setMenuOpen(false));
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") setMenuOpen(false);
-      });
-
-      drawer.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          if (mobileViewport.matches) setMenuOpen(false);
-        });
-      });
-    </script>
   </body>
 </html>

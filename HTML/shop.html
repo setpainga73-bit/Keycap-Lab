@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keycap Lab - Shop</title>
+    <link rel="stylesheet" href="../CSS/Style.css" />
+    <script src="../JS/nav-bar.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- Logo & Navigation Links -->
+      <div class="nav-left">
+        <a href="#" class="logo">
+          <span class="logo-icon"></span>
+          Keycap Lab
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <button
+        class="drawer-backdrop"
+        type="button"
+        aria-label="Close navigation menu"
+        tabindex="-1"
+      ></button>
+      <aside
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Main navigation"
+        aria-hidden="true"
+        inert
+      >
+        <div class="drawer-header">
+          <span class="drawer-title">Menu</span>
+          <button
+            class="drawer-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Bundles</a></li>
+          <li><a href="#">Builder</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a class="nav-auth-button nav-auth-login" href="#">Login</a></li>
+          <li>
+            <a class="nav-auth-button nav-auth-logout" href="#">Logout</a>
+          </li>
+        </ul>
+      </aside>
+    </nav>
+
+    <div class="search-bar">
+      <div class="search-bar-inner">
+        <div class="search-box">
+          <input
+            type="search"
+            placeholder="Search parts"
+            aria-label="Search parts"
+          />
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="page-header">
+        <div class="page-header-top">
+          <div class="page-header-title">
+            <h1>Shop</h1>
+            <span class="page-header-sub">16 result</span>
+          </div>
+          <div class="page-header-sort">
+            <select name="sort" id="sort">
+              <option value="price-asc">Sort: Price (Low to High)</option>
+              <option value="price-desc">Sort: Price (High to Low)</option>
+              <option value="name-asc">Sort: Name (A-Z)</option>
+              <option value="name-desc">Sort: Name (Z-A)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="page-header-fliter">
+          <span class="tag">65%</span>
+          <span class="tag">In stock</span>
+          <button class="clear-btn">Clear all</button>
+        </div>
+      </section>
+
+      <section class="shop-container">
+        <!-- Left Sidebar (Filters) -->
+        <aside class="siderbar-fliter">
+            <!-- Category Filter -->
+          <div class="fliter-group">
+            <h3 class="fliter-group-title">Category</h3>
+            <ul class="fiter-group-list">
+              <li>
+                <label
+                  ><input type="checkbox" name="category" value="cases" />
+                  Cases</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="category" value="pcbs" />
+                  PCBs</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="category" value="plates" />
+                  Plates</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    name="category"
+                    value="switches"
+                    checked
+                  />
+                  Switches</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="category" value="keycaps" />
+                  Keycap sets</label
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Layout Filter -->
+          <div class="filter-group">
+            <h3 class="filter-group-title">Layout</h3>
+            <ul class="filter-group-list">
+              <li>
+                <label
+                  ><input type="radio" name="layout" value="60" /> 60%</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="layout" value="65" checked />
+                  65%</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="layout" value="75" /> 75%</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="layout" value="tkl" /> TKL</label
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Price Filter -->
+          <div class="filter-group">
+            <h3 class="filter-group-title">Price</h3>
+            <div class="price-range">
+              <p class="price-range-selection">
+                <span>Selected price</span>
+                <strong>$20 <span aria-hidden="true">–</span> $300</strong>
+              </p>
+              <div class="price-range-slider" role="group" aria-label="Price range">
+                <input
+                  type="range"
+                  name="min-price"
+                  min="20"
+                  max="300"
+                  value="20"
+                  aria-label="Minimum price"
+                />
+                <input
+                  type="range"
+                  name="max-price"
+                  min="20"
+                  max="300"
+                  value="300"
+                  aria-label="Maximum price"
+                />
+              </div>
+              <div class="price-range-labels">
+                <span>Min</span>
+                <span>Max</span>
+              </div>
+            </div>
+            <label class="toggle-label">
+              <input type="checkbox" name="in-stock" checked /> In stock only
+            </label>
+          </div>
+        </aside>
+
+        <!-- Right Side (Product Grid) -->
+        <section class="product-grid">
+    <!-- Product Card 1 -->
+    <article class="product-card">
+      <div class="product-card-image"></div>
+      <div class="product-card-content">
+        <h4 class="product-card-title">Aluminum 65% Case</h4>
+        <p class="product-card-subtitle">65% / silver</p>
+        <div class="product-card-footer">
+          <span class="product-card-price">$89</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
+           <button class="wishlist-btn" aria-label="Add to wishlist">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Product Card 2 -->
+    <article class="product-card">
+      <div class="product-card-image"></div>
+      <div class="product-card-content">
+        <h4 class="product-card-title">Hotswap 65% PCB</h4>
+        <p class="product-card-subtitle">65% / USB-C</p>
+        <div class="product-card-footer">
+          <span class="product-card-price">$54</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
+           <button class="wishlist-btn" aria-label="Add to wishlist">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Product Card 3 -->
+    <article class="product-card">
+      <div class="product-card-image"></div>
+      <div class="product-card-content">
+        <h4 class="product-card-title">Brass 65% Plate</h4>
+        <p class="product-card-subtitle">65% / brass</p>
+        <div class="product-card-footer">
+          <span class="product-card-price">$32</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
+          <button class="wishlist-btn" aria-label="Add to wishlist">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+     <!-- Product Card 4 -->
+    <article class="product-card">
+      <div class="product-card-image"></div>
+      <div class="product-card-content">
+        <h4 class="product-card-title">Brass 65% Plate</h4>
+        <p class="product-card-subtitle">65% / brass</p>
+        <div class="product-card-footer">
+          <span class="product-card-price">$32</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Product Card 5 -->
+    <article class="product-card">
+      <div class="product-card-image"></div>
+      <div class="product-card-content">
+        <h4 class="product-card-title">Brass 65% Plate</h4>
+        <p class="product-card-subtitle">65% / brass</p>
+        <div class="product-card-footer">
+          <span class="product-card-price">$32</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
+           <button class="wishlist-btn" aria-label="Add to wishlist">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Product Card 6 -->
+    <article class="product-card">
+      <div class="product-card-image"></div>
+      <div class="product-card-content">
+        <h4 class="product-card-title">Brass 65% Plate</h4>
+        <p class="product-card-subtitle">65% / brass</p>
+        <div class="product-card-footer">
+          <span class="product-card-price">$32</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist">&#9825;</button>
+           <button class="wishlist-btn" aria-label="Add to wishlist">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon"></span>
+            Keycap Lab
+          </a>
+          <p>
+            Premium keyboard parts, curated kits, and tools for builders who
+            care about the details.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="#">Bundles</a></li>
+              <li><a href="#">Cases</a></li>
+              <li><a href="#">PCBs</a></li>
+              <li><a href="#">Keycaps</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Journal</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Keycap Lab</span>
+        <div class="footer-meta">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

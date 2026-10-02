@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keycap Lab - Login</title>
+    <link rel="stylesheet" href="../CSS/Style.css" />
+  </head>
+  <body class="login-page">
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon"></span>
+          Keycap Lab
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <button
+        class="drawer-backdrop"
+        type="button"
+        aria-label="Close navigation menu"
+        tabindex="-1"
+      ></button>
+      <aside
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Main navigation"
+        aria-hidden="true"
+        inert
+      >
+        <div class="drawer-header">
+          <span class="drawer-title">Menu</span>
+          <button
+            class="drawer-close"
+            type="button"
+            aria-label="Close navigation menu"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="#">Bundles</a></li>
+          <li><a href="#">Builder</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a class="nav-auth-button nav-auth-login" href="./Login.html">Login</a></li>
+          <li>
+            <a class="nav-auth-button nav-auth-logout" href="./Register.html">Register</a>
+          </li>
+        </ul>
+      </aside>
+    </nav>
+
+    <div class="search-bar">
+      <div class="search-bar-inner">
+        <div class="search-box">
+          <input
+            type="search"
+            placeholder="Search parts"
+            aria-label="Search parts"
+          />
+        </div>
+      </div>
+    </div>
+
+    <main class="login-layout">
+      <section class="login-form-panel" aria-labelledby="login-title">
+        <div class="login-form-wrap">
+          <p class="login-eyebrow">KEYCAP LAB ACCOUNT</p>
+          <h1 id="login-title">Welcome back</h1>
+          <p class="login-intro">
+            Log in to see your saved builds, wishlist and orders.
+          </p>
+
+          <form class="login-form" action="#" method="post">
+            <label class="login-field">
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              />
+            </label>
+
+            <label class="login-field">
+              <span>Password</span>
+              <input
+                type="password"
+                name="password"
+                autocomplete="current-password"
+                placeholder="Your password"
+                required
+              />
+            </label>
+
+            <div class="login-options">
+              <label class="login-remember">
+                <input type="checkbox" name="remember" checked />
+                <span>Remember me</span>
+              </label>
+              <a href="#forgot">Forgot password?</a>
+            </div>
+
+            <button class="login-submit" type="submit">Log in</button>
+          </form>
+
+          <div class="login-divider"><span>or continue with</span></div>
+          <div class="login-socials">
+            <button type="button" class="login-social-button">
+              <span aria-hidden="true">G</span> Continue with Google
+            </button>
+            <button type="button" class="login-social-button">
+              <span aria-hidden="true">◈</span> Continue with GitHub
+            </button>
+          </div>
+
+          <p class="login-signup">
+            New to Keycap Lab? <a href="./Register.html">Create an account</a>
+          </p>
+        </div>
+      </section>
+
+      <aside class="login-story-panel" aria-labelledby="login-story-title">
+        <img
+          src="../IMG/top-view-white-keyboard-desk.jpg"
+          alt="Custom white mechanical keyboard on a desk"
+        />
+        <div class="login-story-content">
+          <span class="login-story-mark" aria-hidden="true">KL</span>
+          <p class="login-story-kicker">PICK UP WHERE YOU LEFT OFF</p>
+          <h2 id="login-story-title">Save your builds and orders.</h2>
+          <p>
+            Your saved builds, wishlist and order tracking are one click away.
+          </p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <span class="logo-icon"></span>
+            Keycap Lab
+          </a>
+          <p>
+            Premium keyboard parts, curated kits, and tools for builders who
+            care about the details.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="#">Bundles</a></li>
+              <li><a href="#">Cases</a></li>
+              <li><a href="#">PCBs</a></li>
+              <li><a href="#">Keycaps</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Journal</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Keycap Lab</span>
+        <div class="footer-meta">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
