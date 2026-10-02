@@ -14,23 +14,36 @@
           <span class="logo-icon"></span>
           Keycap Lab
         </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
         <ul class="nav-links">
           <li><a href="#">Shop</a></li>
           <li><a href="#">Bundles</a></li>
           <li><a href="#">Builder</a></li>
         </ul>
-      </div>
 
-      <!-- Search & User Actions -->
-      <div class="nav-right">
-        <div class="search-box">
-          <input type="text" placeholder="Search parts" />
-        </div>
-        <div class="user-actions">
-          <a href="#">Wishlist</a>
-          <a href="#">Cart</a>
-          <a href="#" class="btn-login">Log in</a>
-          <a href="#" class="btn-register">Register</a>
+        <div class="nav-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search parts" />
+          </div>
+          <div class="user-actions">
+            <a href="#">Wishlist</a>
+            <a href="#">Cart</a>
+            <a href="#" class="btn-login">Log in</a>
+            <a href="#" class="btn-register">Register</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -281,6 +294,30 @@
       </div>
     </footer>
     </main>
-    
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navbar = document.querySelector(".navbar");
+
+      function setMenuOpen(isOpen) {
+        navbar.classList.toggle("menu-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu",
+        );
+      }
+
+      menuToggle.addEventListener("click", () => {
+        setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setMenuOpen(false);
+      });
+
+      document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => setMenuOpen(false));
+      });
+    </script>
   </body>
 </html>
